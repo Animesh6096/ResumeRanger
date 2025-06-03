@@ -60,49 +60,49 @@ export function ContactSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="animate-slide-in-left">
-            <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-8">
+          <div className="animate-scale-in">
+            <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-8 gradient-text">
               Contact Information
             </h3>
 
             <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-primary" />
+              <div className="flex items-center space-x-4 hover-grow cursor-pointer group animate-slide-in-left">
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center group-hover:animate-bounce animate-glow">
+                  <Mail className="h-6 w-6 text-primary group-hover:animate-wave" />
                 </div>
                 <div>
-                  <p className="font-medium text-slate-800 dark:text-slate-100">Email</p>
+                  <p className="font-medium text-slate-800 dark:text-slate-100 group-hover:gradient-text transition-all">Email</p>
                   <a
                     href="mailto:banimesh2002@gmail.com"
-                    className="text-primary hover:text-primary/80 transition-colors"
+                    className="text-primary hover:text-primary/80 transition-colors group-hover:font-semibold"
                   >
                     banimesh2002@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-xl flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-accent" />
+              <div className="flex items-center space-x-4 hover-grow cursor-pointer group animate-slide-in-left animation-delay-200">
+                <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-xl flex items-center justify-center group-hover:animate-bounce animate-glow">
+                  <Phone className="h-6 w-6 text-accent group-hover:animate-wave" />
                 </div>
                 <div>
-                  <p className="font-medium text-slate-800 dark:text-slate-100">Phone</p>
+                  <p className="font-medium text-slate-800 dark:text-slate-100 group-hover:gradient-text transition-all">Phone</p>
                   <a
                     href="tel:+8801781836541"
-                    className="text-accent hover:text-accent/80 transition-colors"
+                    className="text-accent hover:text-accent/80 transition-colors group-hover:font-semibold"
                   >
                     +880 178 183 6541
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center">
-                  <MapPin className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+              <div className="flex items-center space-x-4 hover-grow cursor-pointer group animate-slide-in-left animation-delay-400">
+                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center group-hover:animate-bounce animate-glow">
+                  <MapPin className="h-6 w-6 text-purple-600 dark:text-purple-400 group-hover:animate-wave" />
                 </div>
                 <div>
-                  <p className="font-medium text-slate-800 dark:text-slate-100">Location</p>
-                  <p className="text-slate-600 dark:text-slate-400">
+                  <p className="font-medium text-slate-800 dark:text-slate-100 group-hover:gradient-text transition-all">Location</p>
+                  <p className="text-slate-600 dark:text-slate-400 group-hover:text-slate-800 dark:group-hover:text-slate-200 transition-colors">
                     Merul Badda, Dhaka, Bangladesh
                   </p>
                 </div>
@@ -110,8 +110,8 @@ export function ContactSection() {
             </div>
 
             {/* Social Links */}
-            <div className="mt-8">
-              <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-4">
+            <div className="mt-8 animate-fade-in animation-delay-600">
+              <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-4 gradient-text">
                 Connect With Me
               </h4>
               <div className="flex space-x-4">
@@ -119,26 +119,29 @@ export function ContactSection() {
                   href="https://linkedin.com/in/animesh-bhattacharjee-jhalok"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center hover:bg-blue-200 dark:hover:bg-blue-800/50 transition-colors"
+                  className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center hover-lift animate-glow group"
                 >
-                  <Linkedin className="h-6 w-6 text-primary" />
+                  <Linkedin className="h-6 w-6 text-primary group-hover:animate-bounce" />
                 </a>
                 <a
                   href="https://github.com/Animesh6096"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-xl flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                  className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-xl flex items-center justify-center hover-lift animate-glow group"
                 >
-                  <Github className="h-6 w-6 text-slate-600 dark:text-slate-400" />
+                  <Github className="h-6 w-6 text-slate-600 dark:text-slate-400 group-hover:animate-bounce" />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="animate-slide-in-right">
-            <Card className="bg-white dark:bg-slate-800 border-none shadow-lg">
-              <CardContent className="p-8">
+          <div className="animate-scale-in animation-delay-300">
+            <Card className="bg-white dark:bg-slate-800 border-none shadow-lg hover-lift relative overflow-hidden">
+              <div className="absolute inset-0 opacity-5">
+                <div className="w-full h-full bg-gradient-to-br from-primary to-accent animate-morph"></div>
+              </div>
+              <CardContent className="p-8 relative z-10">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -219,10 +222,15 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-8 py-4 rounded-xl shadow-lg"
+                    className="w-full px-8 py-4 rounded-xl shadow-lg hover-lift animate-glow group relative overflow-hidden"
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                    <Send className="h-4 w-4 ml-2" />
+                    <span className={`transition-all duration-300 ${isSubmitting ? 'animate-bounce' : ''}`}>
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </span>
+                    <Send className={`h-4 w-4 ml-2 transition-all duration-300 ${isSubmitting ? 'animate-rotate' : 'group-hover:animate-bounce'}`} />
+                    {isSubmitting && (
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-20 animate-shimmer"></div>
+                    )}
                   </Button>
                 </form>
               </CardContent>

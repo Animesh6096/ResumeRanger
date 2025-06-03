@@ -1,0 +1,150 @@
+Okay, I've reviewed your updated CV and your requests for darker colors, a dark/light mode, and a blog page.
+
+Based on this, I'll provide a comprehensively updated and detailed prompt for creating your portfolio website. This new prompt will incorporate the information from your latest CV, specify color palettes for both light and dark modes, detail the structure for a new blog page, and maintain the focus on a modern, visually appealing, and animated design.
+
+Here is the updated detailed prompt:
+
+Prompt for Portfolio Website Creation (V2 - Dark/Light Mode & Blog):
+
+Objective: Create a professional, visually engaging, and modern multi-page portfolio website for Animesh Bhattacharjee, a Computer Science student with a strong passion for AI, machine learning, and full-stack development. The website must effectively showcase his skills, updated experience, projects (including the new "Secure Blog Vault"), and provide clear contact options. It should feature a user-toggleable dark and light mode and include a new blog section.
+
+Target Audience: Potential employers, collaborators, academic connections, and readers of his technical blog.
+
+Overall Tone & Style:
+
+Professional & Sophisticated: The design should be clean, polished, and reflect deep expertise in computer science, especially in AI/ML and secure development.
+Modern & Tech-Forward: Utilize contemporary design trends, smooth animations (theme-aware), and high-quality visuals.
+User-Centric: Intuitive navigation, clear information hierarchy, and excellent readability in both light and dark modes.
+Color Palettes & Themeing:
+
+General Principle: The website should default to one mode (e.g., light or system preference) and offer a clear, easily accessible toggle for switching between light and dark modes. Colors should be chosen for excellent contrast and readability in both themes.
+
+Light Mode:
+
+Background: Very Light Gray (e.g., Tailwind bg-slate-100 or bg-gray-100).
+Card/Surface Background: White (e.g., bg-white).
+Primary Text: Dark Slate/Gray (e.g., text-slate-700 or text-gray-700).
+Headings/Emphasis Text: A slightly darker Slate/Gray (e.g., text-slate-800 or text-gray-900).
+Primary Accent (for CTAs, links, key highlights): A strong, professional Blue (e.g., bg-blue-600, text-blue-600).
+Secondary Accent (for secondary CTAs, decorative elements, some icons): A vibrant Teal (e.g., bg-teal-500, text-teal-500) OR a warm Amber (e.g., bg-amber-500, text-amber-500). Animesh to choose preferred secondary accent, or use them contextually.
+Dark Mode:
+
+Background: Very Dark Blue/Gray (e.g., bg-slate-900 or bg-gray-900).
+Card/Surface Background: Dark Gray/Slightly Lighter than BG (e.g., bg-slate-800 or bg-gray-800).
+Primary Text: Light Gray/Off-White (e.g., text-slate-300 or text-gray-300).
+Headings/Emphasis Text: A brighter Off-White (e.g., text-slate-100 or text-gray-100).
+Primary Accent: A slightly brighter/more vivid Blue (to stand out on dark) (e.g., bg-blue-500, text-blue-400).
+Secondary Accent: A brighter Teal (e.g., bg-teal-400, text-teal-300) OR a lighter Amber (e.g., bg-amber-400, text-amber-300).
+Typography:
+
+Headings: A modern, clean sans-serif font (e.g., Inter, Montserrat, Lato, Open Sans).
+Body Text: A highly readable sans-serif font, complementary to the heading font (e.g., Inter, Open Sans, Roboto).
+Code Snippets (for Blog): A clear monospaced font (e.g., Fira Code, Source Code Pro).
+Consistency: Maintain consistent font usage and hierarchy across both themes.
+General Layout & Navigation:
+
+Multi-Page Structure:
+Home
+About Me
+Skills & Expertise
+Portfolio/Projects
+Experience (Professional & Teaching)
+Blog (New)
+Contact
+Header: Sticky header with logo (Initials "AB" or a simple, modern icon – theme-aware) on the left, navigation links on the right, and a Dark/Light Mode Toggle Button (e.g., sun/moon icon).
+Footer: Include copyright information, social media links (LinkedIn, GitHub), and perhaps a quick contact email.
+Responsive Design: Ensure the website is fully responsive and optimized for all devices.
+Animations: Subtle and smooth animations for section transitions, card appearances, and interactive elements (as previously prototyped). Animations should be performant and not jarring.
+Page-Specific Details:
+
+1. Home Page:
+* Hero Section:
+* Headline: Captivating and concise (e.g., "Animesh Bhattacharjee: AI Researcher & Full-Stack Developer").
+* Sub-headline: Briefly mention expertise in AI/ML, secure development, and passion for innovation.
+* Visual: A professional, high-quality abstract background image/animation that adapts to light/dark mode, or a dynamic element.
+* CTA Buttons: "View My Projects," "Read My Blog," "Get In Touch."
+* Brief Introduction: Summarize profile, highlighting key strengths from the updated CV.
+* Key Highlights Section: Icon-driven showcase of 3-4 achievements (e.g., "Lip Reading Thesis," "Secure Blog Platform Dev," "QA Leadership at Nyntax").
+
+2. About Me Page:
+* Detailed Profile: Expand on the CV's profile, incorporating his passion for AI, ML, development, QA experience (emphasizing leadership and UX focus), and teaching.
+* Education Section (Updated):
+* BRAC University: BSc in Computer Science, Graduating Sep 2025, CGPA: 3.60.
+* Expanded Relevant Coursework: Digital Logic Design, OOP, Data Structures, Algorithms, DBMS, OS, Image Processing, Computer Vision, Machine Learning, Cryptography and Cryptanalysis, Ethical Hacking, Computer Networks, Software Engineering, System Analysis and Design.
+* Notre Dame College: HSC, GPA: 5.00.
+* Visuals: Professional photo, theme-aware background elements.
+
+3. Skills & Expertise Page (Updated):
+* Layout: Grid or card-based, with clear categorization.
+* Icons: Theme-aware SVG icons for each skill (logos where appropriate, symbolic icons otherwise).
+* Categories & Skills (from new CV):
+* Development: Django, React, Flask (Icon: Flask logo).
+* Database Management: MySQL, MongoDB (Icon: MongoDB logo).
+* Design: Figma (Icon: Figma logo), Illustrator, Photoshop.
+* Programming Languages: Python, C, Javascript. (Note: TypeScript is used in a project, can be listed here or contextually with the project).
+* ML/DL: TensorFlow, MediaPipe.
+* Currently Learning: Express, Associate Data Scientist Track (DataCamp).
+* Consider adding a small visual indicator for proficiency or years of experience if desired.
+
+4. Portfolio/Projects Page (Updated):
+* Layout: Card-based, with filtering options (e.g., by technology: AI/ML, Web Dev, Security).
+* Project Card Details: Title, Short Description, Technologies (tags/icons), Image/Video Thumbnail, Links (Live Demo, GitHub, Case Study/Blog Post).
+* Projects to Include (from new CV):
+* Adaptive Self-Supervision for Visual Speech Recognition (Thesis): As before.
+* HIRE ME: As before (Flask, React).
+* Secure Blog Vault (New & Highlighted):
+* Description: Full-stack blog platform with robust security.
+* Technologies: React, TypeScript, Express, PostgreSQL, MongoDB.
+* Security Features: End-to-end encryption (AES), Scrypt password hashing, secure user authentication.
+* Visual: Mockup of the blog interface, perhaps highlighting security aspects.
+* Animal Detection: As before.
+* LeapReader: As before.
+* Readventure: As before.
+
+5. Experience Page (Updated):
+* Professional Experience:
+* NYNTAX - Quality Assurance and Content Manager:
+* Updated Bullet Points: "Led quality assurance initiatives...", "Identified, documented, and prioritized bugs...", "Provided UX-focused design feedback to enhance usability and user satisfaction."
+* Teaching & Mentorship Experience: Pangeree Coaching & Limon Education Care (as before).
+* Certifications & Activities: As before.
+
+6. Blog Page (New):
+* Purpose: Share insights on AI, ML, software development, security, personal projects, or learnings from the DataCamp track.
+* Blog Listing Page (/blog):
+* Layout: Clean, readable list or grid of blog post cards.
+* Each Card: Post Title, Publication Date, Short Excerpt, Featured Image (optional), "Read More" link.
+* Filtering/Sorting (Optional): By category, tag, or date.
+* Sidebar (Optional): Search bar, Categories list, Recent Posts.
+* Individual Blog Post Page (/blog/[slug]):
+* Layout: Focus on readability. Single column for content, perhaps with a subtle table of contents for longer posts.
+* Content Elements:
+* Catchy Title.
+* Author (Animesh Bhattacharjee), Publication Date.
+* Featured Image (optional).
+* Main Content Area: Well-formatted text, headings, subheadings, lists, blockquotes.
+* Code Blocks: Support for syntax highlighting (theme-aware).
+* Images/Diagrams within the post.
+* Meta: Estimated read time.
+* Engagement (Future Scope/Placeholder): Social sharing buttons, comments section (e.g., Disqus integration placeholder).
+* Visuals: Clean typography, ample white space (or "dark space" in dark mode). Images should be optimized.
+
+7. Contact Page:
+* Contact Form: Simple, accessible, and functional.
+* Direct Contact Info: Email, Phone, General Location.
+* Social/Professional Links (with theme-aware icons): LinkedIn, GitHub.
+
+Visual Elements & Icons:
+
+Theme-Aware Icons: Prioritize SVG icons that can be styled with CSS for easy color changes between light and dark modes. If raster icons are used, provide versions for both themes.
+High-Quality Imagery: Professional photos, project mockups, and abstract visuals that complement both themes.
+Animations: Ensure all animations are smooth and adapt well to both light and dark backgrounds. Avoid animations that rely on color contrasts that might fail in one of the modes.
+SEO Considerations:
+
+Standard SEO best practices (relevant keywords, optimized images, fast loading, semantic HTML).
+For the blog, ensure proper meta tags for each post.
+Accessibility (A11y):
+
+Ensure sufficient color contrast in both modes.
+Keyboard navigability.
+Semantic HTML.
+ARIA attributes where appropriate.

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { useTheme } from "@/hooks/use-theme";
 import { Sun, Moon, Menu } from "lucide-react";
 
@@ -27,7 +27,8 @@ export function Navigation() {
       let current = "home";
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
+        const element = section as HTMLElement;
+        const sectionTop = element.offsetTop;
         if (window.pageYOffset >= sectionTop - 200) {
           current = section.getAttribute("id") || "home";
         }
@@ -53,7 +54,13 @@ export function Navigation() {
   };
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    if (theme === "light") {
+      setTheme("dark");
+    } else if (theme === "dark") {
+      setTheme("system");
+    } else {
+      setTheme("light");
+    }
   };
 
   return (
@@ -93,11 +100,15 @@ export function Navigation() {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="rounded-lg hover-grow animate-glow"
+              className="rounded-lg hover-grow animate-glow relative"
+              title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
+              {theme === 'system' && (
+                <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+              )}
+              <span className="sr-only">Toggle theme (currently {theme})</span>
             </Button>
 
             {/* Mobile Menu */}
@@ -108,6 +119,10 @@ export function Navigation() {
                 </Button>
               </SheetTrigger>
               <SheetContent>
+                <SheetTitle>Navigation Menu</SheetTitle>
+                <SheetDescription>
+                  Navigate through different sections of the portfolio
+                </SheetDescription>
                 <div className="flex flex-col space-y-4 mt-8">
                   {navLinks.map((link) => (
                     <button

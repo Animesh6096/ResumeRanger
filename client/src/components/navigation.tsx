@@ -84,9 +84,9 @@ export function Navigation() {
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium transition-all duration-300 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 hover:scale-105 ${
                   activeSection === link.href.replace("#", "")
-                    ? "text-primary"
+                    ? "text-primary bg-primary/10"
                     : "text-slate-600 dark:text-slate-400 hover:text-primary"
                 }`}
               >
@@ -129,9 +129,9 @@ export function Navigation() {
                     <button
                       key={link.href}
                       onClick={() => handleNavClick(link.href)}
-                      className={`text-left text-lg font-medium transition-colors ${
+                      className={`text-left text-lg font-medium transition-all duration-300 px-4 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-600 hover:scale-105 w-full ${
                         activeSection === link.href.replace("#", "")
-                          ? "text-primary"
+                          ? "text-primary bg-primary/10"
                           : "text-slate-600 dark:text-slate-400 hover:text-primary"
                       }`}
                     >

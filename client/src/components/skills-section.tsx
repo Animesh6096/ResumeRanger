@@ -110,22 +110,42 @@ export function SkillsSection() {
             return (
               <div
                 key={category.title}
-                className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 animate-slide-up"
+                className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg hover-lift animate-scale-in group relative overflow-hidden"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`w-16 h-16 ${colorClasses[category.color as keyof typeof colorClasses]} rounded-2xl flex items-center justify-center mb-6`}>
-                  <IconComponent className="h-8 w-8" />
+                {/* Animated background gradient */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
+                  <div className={`w-full h-full bg-gradient-to-br ${
+                    category.color === 'blue' ? 'from-blue-400 to-blue-600' :
+                    category.color === 'teal' ? 'from-teal-400 to-teal-600' :
+                    category.color === 'purple' ? 'from-purple-400 to-purple-600' :
+                    category.color === 'orange' ? 'from-orange-400 to-orange-600' :
+                    category.color === 'pink' ? 'from-pink-400 to-pink-600' :
+                    'from-green-400 to-green-600'
+                  } animate-morph`}></div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4">
+
+                <div className={`w-16 h-16 ${colorClasses[category.color as keyof typeof colorClasses]} rounded-2xl flex items-center justify-center mb-6 relative z-10 group-hover:animate-bounce transition-all duration-300`}>
+                  <IconComponent className="h-8 w-8 group-hover:animate-rotate" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 relative z-10 group-hover:gradient-text transition-all duration-300">
                   {category.title}
                 </h3>
-                <div className="space-y-3">
-                  {category.skills.map((skill) => {
+                
+                <div className="space-y-3 relative z-10">
+                  {category.skills.map((skill, skillIndex) => {
                     const SkillIcon = skill.icon;
                     return (
-                      <div key={skill.name} className="flex items-center space-x-3">
-                        <SkillIcon className="h-5 w-5 text-slate-600 dark:text-slate-400" />
-                        <span className="text-slate-600 dark:text-slate-400">{skill.name}</span>
+                      <div 
+                        key={skill.name} 
+                        className="flex items-center space-x-3 hover-grow cursor-pointer group/skill animate-slide-in-left"
+                        style={{ animationDelay: `${(index * 100) + (skillIndex * 50)}ms` }}
+                      >
+                        <SkillIcon className="h-5 w-5 text-slate-600 dark:text-slate-400 group-hover/skill:text-primary transition-colors duration-300 group-hover/skill:animate-bounce" />
+                        <span className="text-slate-600 dark:text-slate-400 group-hover/skill:text-slate-800 dark:group-hover/skill:text-slate-200 transition-colors duration-300 group-hover/skill:font-medium">
+                          {skill.name}
+                        </span>
                       </div>
                     );
                   })}

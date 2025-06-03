@@ -57,15 +57,15 @@ export function Navigation() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
+    <nav className="sticky top-0 z-50 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 animate-slide-in-left">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg">
+          <div className="flex items-center space-x-3 hover-grow">
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg animate-glow hover:animate-bounce transition-all">
               AB
             </div>
-            <span className="text-xl font-semibold text-slate-800 dark:text-slate-100">
+            <span className="text-xl font-semibold text-slate-800 dark:text-slate-100 gradient-text">
               Animesh
             </span>
           </div>
@@ -93,7 +93,7 @@ export function Navigation() {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="rounded-lg"
+              className="rounded-lg hover-grow animate-glow"
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />

@@ -75,7 +75,7 @@ export function BlogSection() {
           {filteredPosts.map((post, index) => (
             <Card
               key={post.id}
-              className="bg-slate-50 dark:bg-slate-700 border-none shadow-lg hover:shadow-xl transition-all transform hover:scale-105 animate-slide-up overflow-hidden group cursor-pointer"
+              className="bg-slate-50 dark:bg-slate-700 border-none shadow-lg hover-lift animate-scale-in overflow-hidden group cursor-pointer relative"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <Link href={`/blog/${post.slug}`}>

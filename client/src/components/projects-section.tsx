@@ -59,50 +59,52 @@ export function ProjectsSection() {
           {filteredProjects.map((project, index) => (
             <Card
               key={project.id}
-              className="group bg-slate-50 dark:bg-slate-700 border-none shadow-lg hover:shadow-xl transition-all transform hover:scale-105 animate-slide-up overflow-hidden"
+              className="group bg-slate-50 dark:bg-slate-700 border-none shadow-lg hover-lift animate-scale-in overflow-hidden relative"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className={`w-full h-48 bg-gradient-to-br ${project.image.gradient} flex items-center justify-center relative overflow-hidden`}>
-                <div className="absolute inset-0 opacity-20">
+              <div className={`w-full h-48 bg-gradient-to-br ${project.image.gradient} flex items-center justify-center relative overflow-hidden group-hover:animate-morph transition-all duration-500`}>
+                <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
                   {project.image.animation === "grid-pulse" && (
                     <div className="grid grid-cols-8 gap-1 h-full">
                       {Array.from({ length: 8 }).map((_, i) => (
                         <div
                           key={i}
-                          className="bg-white animate-pulse"
+                          className="bg-white animate-pulse group-hover:animate-bounce"
                           style={{ animationDelay: `${i * 100}ms` }}
                         />
                       ))}
                     </div>
                   )}
                   {project.image.animation === "border-pulse" && (
-                    <div className="w-full h-full border-2 border-white border-dashed animate-pulse" />
+                    <div className="w-full h-full border-2 border-white border-dashed animate-pulse group-hover:animate-glow" />
                   )}
                   {project.image.animation === "grid-fade" && (
                     <div className="grid grid-cols-3 gap-2 h-full p-4">
                       {Array.from({ length: 3 }).map((_, i) => (
-                        <div key={i} className="bg-white rounded" />
+                        <div key={i} className="bg-white rounded group-hover:animate-shimmer" />
                       ))}
                     </div>
                   )}
                   {project.image.animation === "box-detection" && (
                     <>
-                      <div className="absolute top-4 left-4 w-16 h-12 border-2 border-white animate-pulse" />
-                      <div className="absolute top-8 right-8 w-12 h-16 border-2 border-white animate-pulse animation-delay-500" />
+                      <div className="absolute top-4 left-4 w-16 h-12 border-2 border-white animate-pulse group-hover:animate-bounce" />
+                      <div className="absolute top-8 right-8 w-12 h-16 border-2 border-white animate-pulse animation-delay-500 group-hover:animate-bounce" />
                     </>
                   )}
                   {project.image.animation === "lip-animation" && (
-                    <div className="w-20 h-12 bg-white rounded-full mx-auto mt-16 animate-pulse" />
+                    <div className="w-20 h-12 bg-white rounded-full mx-auto mt-16 animate-pulse group-hover:animate-wave" />
                   )}
                   {project.image.animation === "book-grid" && (
                     <div className="grid grid-cols-4 gap-1 h-full p-4">
                       {Array.from({ length: 4 }).map((_, i) => (
-                        <div key={i} className="bg-white rounded h-full" />
+                        <div key={i} className="bg-white rounded h-full group-hover:animate-float" style={{ animationDelay: `${i * 200}ms` }} />
                       ))}
                     </div>
                   )}
                 </div>
-                {getProjectIcon(project.image.icon)}
+                <div className="group-hover:animate-bounce transition-all duration-300">
+                  {getProjectIcon(project.image.icon)}
+                </div>
               </div>
 
               <CardContent className="p-6">

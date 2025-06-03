@@ -67,7 +67,7 @@ export function ContactSection() {
 
             <div className="space-y-6">
               <div className="flex items-center space-x-4 hover-grow cursor-pointer group animate-slide-in-left">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center group-hover:animate-bounce animate-glow">
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center group-hover:animate-bounce">
                   <Mail className="h-6 w-6 text-primary group-hover:animate-wave" />
                 </div>
                 <div>
@@ -82,7 +82,7 @@ export function ContactSection() {
               </div>
 
               <div className="flex items-center space-x-4 hover-grow cursor-pointer group animate-slide-in-left animation-delay-200">
-                <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-xl flex items-center justify-center group-hover:animate-bounce animate-glow">
+                <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-xl flex items-center justify-center group-hover:animate-bounce">
                   <Phone className="h-6 w-6 text-accent group-hover:animate-wave" />
                 </div>
                 <div>
@@ -97,7 +97,7 @@ export function ContactSection() {
               </div>
 
               <div className="flex items-center space-x-4 hover-grow cursor-pointer group animate-slide-in-left animation-delay-400">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center group-hover:animate-bounce animate-glow">
+                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center group-hover:animate-bounce">
                   <MapPin className="h-6 w-6 text-purple-600 dark:text-purple-400 group-hover:animate-wave" />
                 </div>
                 <div>
@@ -119,7 +119,7 @@ export function ContactSection() {
                   href="https://linkedin.com/in/animesh-bhattacharjee-jhalok"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center hover-lift animate-glow group"
+                  className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center hover-lift group"
                 >
                   <Linkedin className="h-6 w-6 text-primary group-hover:animate-bounce" />
                 </a>
@@ -127,7 +127,7 @@ export function ContactSection() {
                   href="https://github.com/Animesh6096"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-xl flex items-center justify-center hover-lift animate-glow group"
+                  className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-xl flex items-center justify-center hover-lift group"
                 >
                   <Github className="h-6 w-6 text-slate-600 dark:text-slate-400 group-hover:animate-bounce" />
                 </a>
@@ -222,7 +222,7 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-8 py-4 rounded-xl shadow-lg hover-lift animate-glow group relative overflow-hidden"
+                    className="w-full px-8 py-4 rounded-xl shadow-lg hover-lift group relative overflow-hidden"
                   >
                     <span className={`transition-all duration-300 ${isSubmitting ? 'animate-bounce' : ''}`}>
                       {isSubmitting ? "Sending..." : "Send Message"}

@@ -69,7 +69,7 @@ export function Navigation() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-3 hover-grow">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg animate-glow hover:animate-bounce transition-all">
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg hover:animate-bounce transition-all">
               AB
             </div>
             <span className="text-xl font-semibold text-slate-800 dark:text-slate-100 gradient-text">
@@ -100,7 +100,7 @@ export function Navigation() {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="rounded-lg hover-grow animate-glow relative"
+              className="rounded-lg hover-grow relative"
               title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

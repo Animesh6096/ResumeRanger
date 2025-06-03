@@ -2,20 +2,6 @@ import { GraduationCap, Briefcase, Award, Users } from "lucide-react";
 
 const experiences = [
   {
-    id: "teaching-current",
-    title: "Physics Teacher",
-    company: "Pangeree Coaching & Limon Education Care",
-    period: "November 2024 – Present",
-    location: "Sirajganj",
-    type: "Current",
-    icon: GraduationCap,
-    description: [
-      "Teaching Physics to classes 9 and 10 with focus on simplifying complex concepts",
-      "Mentoring students with collaborative and personalized teaching approach",
-      "Improving student results through innovative teaching methods"
-    ]
-  },
-  {
     id: "nyntax",
     title: "Quality Assurance & Content Manager",
     company: "NYNTAX",
@@ -28,33 +14,6 @@ const experiences = [
       "Streamlined testing processes and ensured product reliability",
       "Identified, documented, and prioritized bugs for timely resolution",
       "Provided UX-focused design feedback to enhance user satisfaction"
-    ]
-  },
-  {
-    id: "university-activities",
-    title: "Executive Positions",
-    company: "BRAC University",
-    period: "2023 – Present",
-    location: "",
-    type: "",
-    icon: Users,
-    description: [
-      "Executive of Marketing and Design - Art and Photography Society",
-      "Executive of Research and Development - Research for Development",
-      "Volunteer - Office of Co-curricular Activities"
-    ]
-  },
-  {
-    id: "certifications",
-    title: "Certifications",
-    company: "",
-    period: "",
-    location: "",
-    type: "",
-    icon: Award,
-    description: [
-      "App Development Course - BRAC University TARC (Figma design, Dart programming, and Flutter development)",
-      "Machine Learning A-Z™ - Udemy (Comprehensive ML algorithms, data preprocessing, and model evaluation)"
     ]
   }
 ];

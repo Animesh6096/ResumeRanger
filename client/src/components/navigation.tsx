@@ -104,8 +104,9 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Theme Toggle & Mobile Menu */}
-          <div className="flex items-center space-x-4">
+          {/* Accessibility & Theme Controls */}
+          <div className="flex items-center space-x-2">
+            <ContrastSelector />
             <Button
               variant="ghost"
               size="icon"
@@ -133,7 +134,33 @@ export function Navigation() {
                 <SheetDescription>
                   Navigate through different sections of the portfolio
                 </SheetDescription>
-                <div className="flex flex-col space-y-4 mt-8">
+                
+                {/* Mobile Accessibility Controls */}
+                <div className="flex items-center justify-center space-x-6 mt-6 mb-8 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                  <div className="flex flex-col items-center space-y-2">
+                    <span className="text-xs font-medium text-slate-600 dark:text-slate-400">Contrast</span>
+                    <ContrastSelector />
+                  </div>
+                  <div className="flex flex-col items-center space-y-2">
+                    <span className="text-xs font-medium text-slate-600 dark:text-slate-400">Theme</span>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={toggleTheme}
+                      className="rounded-lg hover-grow relative"
+                      title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
+                    >
+                      <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                      <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                      {theme === 'system' && (
+                        <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                      )}
+                      <span className="sr-only">Toggle theme (currently {theme})</span>
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="flex flex-col space-y-4">
                   {navLinks.map((link) => (
                     <button
                       key={link.href}

@@ -54,6 +54,13 @@ export function Navigation() {
     setIsOpen(false);
   };
 
+  // Auto scroll to top when navigating between pages
+  useEffect(() => {
+    if (location !== "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location]);
+
   const toggleTheme = () => {
     const nextTheme = theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
     setTheme(nextTheme);

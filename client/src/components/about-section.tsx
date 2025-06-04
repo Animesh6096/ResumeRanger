@@ -21,12 +21,12 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="animate-slide-in-left">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+          <div className="lg:col-span-1 flex justify-center lg:justify-start">
             {/* Enhanced profile section */}
-            <div className="relative">
-              <div className="w-full aspect-square bg-gradient-to-br from-blue-100 via-purple-50 to-teal-100 dark:from-blue-900/30 dark:via-purple-900/20 dark:to-teal-900/30 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-xl">
-                <div className="w-48 h-48 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white text-6xl font-bold shadow-2xl relative">
+            <div className="relative w-64 md:w-72 lg:w-full max-w-sm">
+              <div className="aspect-square bg-gradient-to-br from-blue-100 via-purple-50 to-teal-100 dark:from-blue-900/30 dark:via-purple-900/20 dark:to-teal-900/30 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-xl">
+                <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-2xl relative">
                   <span className="z-10">AB</span>
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-teal-500 rounded-lg animate-pulse opacity-75"></div>
                 </div>
@@ -34,12 +34,12 @@ export function AboutSection() {
               
               {/* Graduation hat decoration */}
               <div className="absolute -top-2 -right-2">
-                <GraduationCap className="w-12 h-12 text-primary drop-shadow-lg" />
+                <GraduationCap className="w-10 h-10 md:w-12 md:h-12 text-primary drop-shadow-lg" />
               </div>
             </div>
           </div>
 
-          <div className="animate-slide-in-right">
+          <div className="lg:col-span-2 animate-slide-in-right">
             <div className="flex items-center space-x-3 mb-6">
               <Zap className="w-8 h-8 text-primary" />
               <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-100">

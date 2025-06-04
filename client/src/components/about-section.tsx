@@ -1,14 +1,17 @@
 import { GraduationCap, Users, BookOpen, Zap } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export function AboutSection() {
+  const scrollRef = useScrollAnimation();
+  
   return (
-    <section id="about" className="py-20 bg-white dark:bg-slate-800 relative overflow-hidden">
+    <section id="about" className="py-20 bg-white dark:bg-slate-800 relative overflow-hidden" ref={scrollRef}>
       {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2 scroll-animate-scale"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full translate-x-1/2 translate-y-1/2 scroll-animate-scale"></div>
       
       <div className="max-w-7xl mx-auto px-6 relative">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 scroll-animate">
           <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Users className="w-4 h-4 mr-2" />
             Get to know me better
@@ -22,7 +25,7 @@ export function AboutSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
-          <div className="lg:col-span-1 flex justify-center lg:justify-start">
+          <div className="lg:col-span-1 flex justify-center lg:justify-start scroll-animate-left">
             {/* Enhanced profile section */}
             <div className="relative w-64 md:w-72 lg:w-full max-w-sm">
               <div className="aspect-square bg-gradient-to-br from-blue-100 via-purple-50 to-teal-100 dark:from-blue-900/30 dark:via-purple-900/20 dark:to-teal-900/30 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-xl">
@@ -39,15 +42,15 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div className="lg:col-span-2 animate-slide-in-right">
-            <div className="flex items-center space-x-3 mb-6">
+          <div className="lg:col-span-2 scroll-animate-right">
+            <div className="flex items-center space-x-3 mb-6 scroll-animate">
               <Zap className="w-8 h-8 text-primary" />
               <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-100">
                 Computer Science Student & AI Researcher
               </h3>
             </div>
             
-            <div className="prose prose-lg dark:prose-invert max-w-none">
+            <div className="prose prose-lg dark:prose-invert max-w-none scroll-animate">
               <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
                 I am a Computer Science student at BRAC University, passionate about AI, machine learning, and development. 
                 I worked as a QA Manager at Nyntax, focusing on improving user experience and leading quality assurance initiatives 
@@ -61,9 +64,9 @@ export function AboutSection() {
             </div>
 
             {/* Education Section */}
-            <div className="space-y-6">
+            <div className="space-y-6 scroll-animate">
               {/* BRAC University */}
-              <div className="bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+              <div className="bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300 scroll-animate-scale">
                 <div className="flex items-center space-x-3 mb-4">
                   <GraduationCap className="w-6 h-6 text-primary" />
                   <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
@@ -95,7 +98,7 @@ export function AboutSection() {
               </div>
 
               {/* Notre Dame College */}
-              <div className="bg-gradient-to-r from-accent/5 to-primary/5 border border-accent/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+              <div className="bg-gradient-to-r from-accent/5 to-primary/5 border border-accent/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300 scroll-animate-scale">
                 <div className="flex items-center space-x-3 mb-4">
                   <BookOpen className="w-6 h-6 text-accent" />
                   <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">

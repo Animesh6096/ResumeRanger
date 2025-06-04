@@ -43,15 +43,15 @@ export function ExperienceSection() {
               const IconComponent = exp.icon;
               
               return (
-                <div key={exp.id} className="relative">
+                <div key={exp.id} className="relative scroll-fade-in">
                   {/* Experience Card - Full Width */}
-                  <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                  <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border-l-4 border-primary/80 dark:border-accent/80 border-slate-200 dark:border-slate-700 p-8 hover:shadow-2xl hover:shadow-primary/30 dark:hover:shadow-accent/30 transition-all duration-500 hover:scale-[1.03] animate-fade-in-up">
                     <div className="flex items-start space-x-6">
                       {/* Company Logo or Icon */}
                       <div className="flex-shrink-0">
                         {exp.logo ? (
                           <div className="w-16 h-16 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 flex items-center justify-center p-2 shadow-sm">
-                            <img src="/nyntax.jpg" alt="NYNTAX Logo" className="w-12 h-12 object-contain rounded-md" />
+                            <img src="/nyntax.jpg" alt="NYNTAX company logo, where Animesh worked as QA Manager" className="w-12 h-12 object-contain rounded-md" />
                           </div>
                         ) : (
                           <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">

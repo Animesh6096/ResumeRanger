@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Linkedin, Github, Facebook } from "lucide-react";
 
 export function ContactSection() {
   const { toast } = useToast();
@@ -130,6 +130,15 @@ export function ContactSection() {
                   className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-xl flex items-center justify-center hover-lift group"
                 >
                   <Github className="h-6 w-6 text-slate-600 dark:text-slate-400 group-hover:animate-bounce" />
+                </a>
+                <a
+                  href="https://www.facebook.com/animesh.bhattacharjee.6096"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-600 transition-colors duration-200"
+                  aria-label="Facebook profile of Animesh Bhattacharjee"
+                >
+                  <Facebook className="w-6 h-6" />
                 </a>
               </div>
             </div>

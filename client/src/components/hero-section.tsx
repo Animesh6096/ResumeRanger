@@ -99,7 +99,8 @@ export function HeroSection() {
               href="https://github.com/Animesh6096"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              className="hover:text-gray-800 dark:hover:text-white"
+              aria-label="GitHub profile of Animesh Bhattacharjee"
             >
               <Github className="w-5 h-5" />
             </a>
@@ -107,7 +108,8 @@ export function HeroSection() {
               href="https://linkedin.com/in/animesh-bhattacharjee-jhalok"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              className="hover:text-blue-700"
+              aria-label="LinkedIn profile of Animesh Bhattacharjee"
             >
               <Linkedin className="w-5 h-5" />
             </a>
@@ -115,13 +117,15 @@ export function HeroSection() {
               href="https://www.facebook.com/animesh.bhattacharjee.6096"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-blue-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              className="hover:text-blue-600"
+              aria-label="Facebook profile of Animesh Bhattacharjee"
             >
               <FaFacebook className="w-5 h-5" />
             </a>
             <a
               href="mailto:banimesh2002@gmail.com"
-              className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              className="hover:text-red-600"
+              aria-label="Email Animesh Bhattacharjee"
             >
               <Mail className="w-5 h-5" />
             </a>

@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, FacebookIcon } from "lucide-react";
 
 export function Footer() {
   return (
@@ -24,7 +24,8 @@ export function Footer() {
               href="https://linkedin.com/in/animesh-bhattacharjee-jhalok"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+              className="hover:text-blue-700"
+              aria-label="LinkedIn profile of Animesh Bhattacharjee"
             >
               <Linkedin className="h-6 w-6" />
             </a>
@@ -32,22 +33,33 @@ export function Footer() {
               href="https://github.com/Animesh6096"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
+              className="hover:text-gray-800 dark:hover:text-white"
+              aria-label="GitHub profile of Animesh Bhattacharjee"
             >
               <Github className="h-6 w-6" />
             </a>
             <a
               href="mailto:banimesh2002@gmail.com"
-              className="text-slate-600 dark:text-slate-400 hover:text-accent transition-colors"
+              className="hover:text-red-600"
+              aria-label="Email Animesh Bhattacharjee"
             >
               <Mail className="h-6 w-6" />
             </a>
             <a
               href="/Animesh_Bhattacharjee_Resume(LaTeX).pdf"
               download
-              className="text-slate-600 dark:text-slate-400 hover:text-green-600 transition-colors border border-green-600 px-4 py-2 rounded-lg font-medium ml-2"
+              className="bg-green-600 text-white hover:bg-green-700 transition-all duration-200 px-4 py-2 rounded font-medium ml-2 shadow hover:scale-105 hover:shadow-lg"
             >
               Download Resume
+            </a>
+            <a
+              href="https://www.facebook.com/animesh.bhattacharjee.6096"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-600"
+              aria-label="Facebook profile of Animesh Bhattacharjee"
+            >
+              <FacebookIcon className="w-5 h-5" />
             </a>
           </div>
         </div>

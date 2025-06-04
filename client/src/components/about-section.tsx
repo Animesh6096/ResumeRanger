@@ -30,7 +30,7 @@ export function AboutSection() {
             <div className="relative w-64 md:w-72 lg:w-full max-w-sm">
               <div className="aspect-square bg-gradient-to-br from-blue-100 via-purple-50 to-teal-100 dark:from-blue-900/30 dark:via-purple-900/20 dark:to-teal-900/30 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-xl">
                 <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-2xl relative">
-                  <img src="/Animesh.jpg" alt="Animesh Bhattacharjee" className="z-10 w-full h-full object-cover rounded-lg" />
+                  <img src="/Animesh.jpg" alt="Portrait of Animesh Bhattacharjee, AI Researcher and Full-Stack Developer" className="z-10 w-full h-full object-cover rounded-lg" />
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-teal-500 rounded-lg animate-pulse opacity-75"></div>
                 </div>
               </div>

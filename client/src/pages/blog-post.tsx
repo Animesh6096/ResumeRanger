@@ -98,7 +98,7 @@ export default function BlogPost() {
               </div>
               <div>
                 <p className="font-semibold text-slate-800 dark:text-slate-100">
-                  Animesh Bhattacharjee
+                  ANIMESH BHATTACHARJEE
                 </p>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
                   AI Researcher & Full-Stack Developer

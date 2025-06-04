@@ -103,7 +103,7 @@ export function ContactSection() {
                 <div>
                   <p className="font-medium text-slate-800 dark:text-slate-100 group-hover:gradient-text transition-all">Location</p>
                   <p className="text-slate-600 dark:text-slate-400 group-hover:text-slate-800 dark:group-hover:text-slate-200 transition-colors">
-                    Merul Badda, Dhaka, Bangladesh
+                    Merul Badda, Dhaka
                   </p>
                 </div>
               </div>

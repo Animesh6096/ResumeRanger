@@ -11,7 +11,7 @@ export function Footer() {
             </div>
             <div>
               <p className="font-semibold text-slate-800 dark:text-slate-100">
-                Animesh Bhattacharjee
+                ANIMESH BHATTACHARJEE
               </p>
               <p className="text-sm text-slate-600 dark:text-slate-400">
                 AI Researcher & Full-Stack Developer
@@ -42,12 +42,19 @@ export function Footer() {
             >
               <Mail className="h-6 w-6" />
             </a>
+            <a
+              href="/Animesh_Bhattacharjee_Resume(LaTeX).pdf"
+              download
+              className="text-slate-600 dark:text-slate-400 hover:text-green-600 transition-colors border border-green-600 px-4 py-2 rounded-lg font-medium ml-2"
+            >
+              Download Resume
+            </a>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700 text-center">
           <p className="text-slate-600 dark:text-slate-400 text-sm">
-            © 2024 Animesh Bhattacharjee. All rights reserved. Built with passion for innovation.
+            © 2024 ANIMESH BHATTACHARJEE. All rights reserved. Built with passion for innovation.
           </p>
         </div>
       </div>

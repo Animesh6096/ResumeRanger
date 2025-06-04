@@ -76,8 +76,8 @@ export function HeroSection() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-slate-800 dark:text-slate-100 mb-6 leading-tight">
-            <span className="animate-scale-in">Animesh</span><br />
-            <span className="gradient-text animate-scale-in animation-delay-200">Bhattacharjee</span>
+            <span className="animate-scale-in">ANIMESH</span><br />
+            <span className="gradient-text animate-scale-in animation-delay-200">BHATTACHARJEE</span>
           </h1>
           
           <div className="h-16 flex items-center justify-center mb-8">
@@ -96,7 +96,7 @@ export function HeroSection() {
           {/* Social Icons */}
           <div className="flex justify-center space-x-6 mb-8 animate-slide-up animation-delay-350">
             <a
-              href="https://github.com/animeshbhattacharjee"
+              href="https://github.com/Animesh6096"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300 hover:scale-110 hover:shadow-lg"
@@ -104,7 +104,7 @@ export function HeroSection() {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/animeshbhattacharjee"
+              href="https://linkedin.com/in/animesh-bhattacharjee-jhalok"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
@@ -112,7 +112,7 @@ export function HeroSection() {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="https://facebook.com/animeshbhattacharjee"
+              href="https://www.facebook.com/animesh.bhattacharjee.6096"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-blue-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
@@ -120,7 +120,7 @@ export function HeroSection() {
               <FaFacebook className="w-5 h-5" />
             </a>
             <a
-              href="mailto:animesh@example.com"
+              href="mailto:banimesh2002@gmail.com"
               className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
             >
               <Mail className="w-5 h-5" />

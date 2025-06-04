@@ -1,6 +1,6 @@
 import { GraduationCap, Users, BookOpen, Zap } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
+import profilePic from "/Users/animesh/Documents/ResumeRanger/attached_assets/24141102_Animesh Bhattacharjee_Photo.jpg"; // adjust path as needed
 export function AboutSection() {
   const scrollRef = useScrollAnimation();
   
@@ -30,7 +30,7 @@ export function AboutSection() {
             <div className="relative w-64 md:w-72 lg:w-full max-w-sm">
               <div className="aspect-square bg-gradient-to-br from-blue-100 via-purple-50 to-teal-100 dark:from-blue-900/30 dark:via-purple-900/20 dark:to-teal-900/30 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-xl">
                 <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-2xl relative">
-                  <span className="z-10">AB</span>
+                  <img src="/Animesh.jpg" alt="Animesh Bhattacharjee" className="z-10 w-full h-full object-cover rounded-lg" />
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-teal-500 rounded-lg animate-pulse opacity-75"></div>
                 </div>
               </div>
@@ -52,7 +52,7 @@ export function AboutSection() {
             
             <div className="prose prose-lg dark:prose-invert max-w-none scroll-animate">
               <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                I am a Computer Science student at BRAC University, passionate about AI, machine learning, and development. 
+                I am ANIMESH BHATTACHARJEE, a Computer Science student at BRAC University, passionate about AI, machine learning, and development. 
                 I worked as a QA Manager at Nyntax, focusing on improving user experience and leading quality assurance initiatives 
                 across mobile apps and websites.
               </p>

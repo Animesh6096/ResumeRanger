@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Brain, Shield, Users, Sparkles, Code, Database, Github, Linkedin, Mail } from "lucide-react";
 import { FaFacebook } from "react-icons/fa";
+import { Facebook } from "lucide-react";
 
 export function HeroSection() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -117,10 +118,10 @@ export function HeroSection() {
               href="https://www.facebook.com/animesh.bhattacharjee.6096"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600"
+              className="hover:text-blue-600 transition-colors duration-300"
               aria-label="Facebook profile of Animesh Bhattacharjee"
             >
-              <FaFacebook className="w-5 h-5" />
+              <Facebook className="w-5 h-5" />
             </a>
             <a
               href="mailto:banimesh2002@gmail.com"

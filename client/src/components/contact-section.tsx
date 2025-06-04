@@ -135,10 +135,10 @@ export function ContactSection() {
                   href="https://www.facebook.com/animesh.bhattacharjee.6096"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-blue-600 transition-colors duration-200"
+                  className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center hover-lift group transition-colors duration-300"
                   aria-label="Facebook profile of Animesh Bhattacharjee"
                 >
-                  <Facebook className="w-6 h-6" />
+                  <Facebook className="h-6 w-6 text-blue-600 group-hover:animate-bounce" />
                 </a>
               </div>
             </div>

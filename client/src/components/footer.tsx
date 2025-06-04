@@ -24,7 +24,7 @@ export function Footer() {
               href="https://linkedin.com/in/animesh-bhattacharjee-jhalok"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-700"
+              className="hover:text-blue-700 transition-colors duration-300"
               aria-label="LinkedIn profile of Animesh Bhattacharjee"
             >
               <Linkedin className="h-6 w-6" />
@@ -33,14 +33,14 @@ export function Footer() {
               href="https://github.com/Animesh6096"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-800 dark:hover:text-white"
+              className="hover:text-gray-800 dark:hover:text-white transition-colors duration-300"
               aria-label="GitHub profile of Animesh Bhattacharjee"
             >
               <Github className="h-6 w-6" />
             </a>
             <a
               href="mailto:banimesh2002@gmail.com"
-              className="hover:text-red-600"
+              className="hover:text-red-600 transition-colors duration-300"
               aria-label="Email Animesh Bhattacharjee"
             >
               <Mail className="h-6 w-6" />
@@ -56,7 +56,7 @@ export function Footer() {
               href="https://www.facebook.com/animesh.bhattacharjee.6096"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600"
+              className="hover:text-blue-600 transition-colors duration-300"
               aria-label="Facebook profile of Animesh Bhattacharjee"
             >
               <FacebookIcon className="w-5 h-5" />

@@ -1,27 +1,4 @@
-import { Brain, Code, Shield, GraduationCap, Award, Users, BookOpen, Zap } from "lucide-react";
-
-const highlights = [
-  {
-    icon: Brain,
-    title: "AI Research",
-    description: "Working on lip reading thesis using computer vision and deep learning"
-  },
-  {
-    icon: Shield,
-    title: "Security Focus",
-    description: "Passionate about cybersecurity and secure development practices"
-  },
-  {
-    icon: Code,
-    title: "Full-Stack Dev",
-    description: "Building modern web applications with React, Node.js, and Python"
-  },
-  {
-    icon: Award,
-    title: "Quality Leader",
-    description: "Former QA Manager at NYNTAX with proven leadership skills"
-  }
-];
+import { GraduationCap, Users, BookOpen, Zap } from "lucide-react";
 
 export function AboutSection() {
   return (
@@ -48,32 +25,16 @@ export function AboutSection() {
           <div className="animate-slide-in-left">
             {/* Enhanced profile section */}
             <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-blue-100 via-purple-50 to-teal-100 dark:from-blue-900/30 dark:via-purple-900/20 dark:to-teal-900/30 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-xl">
-                <div className="w-48 h-48 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-2xl relative">
+              <div className="w-full aspect-square bg-gradient-to-br from-blue-100 via-purple-50 to-teal-100 dark:from-blue-900/30 dark:via-purple-900/20 dark:to-teal-900/30 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-xl">
+                <div className="w-48 h-48 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white text-6xl font-bold shadow-2xl relative">
                   <span className="z-10">AB</span>
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-teal-500 rounded-full animate-pulse opacity-75"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-teal-500 rounded-lg animate-pulse opacity-75"></div>
                 </div>
               </div>
               
-              {/* Floating stats */}
-              <div className="absolute -top-4 -right-4 bg-white dark:bg-slate-800 rounded-xl p-4 shadow-lg border border-slate-200 dark:border-slate-700">
-                <div className="flex items-center space-x-2">
-                  <GraduationCap className="w-5 h-5 text-primary" />
-                  <div>
-                    <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">CGPA</p>
-                    <p className="text-lg font-bold text-primary">3.60</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="absolute -bottom-4 -left-4 bg-white dark:bg-slate-800 rounded-xl p-4 shadow-lg border border-slate-200 dark:border-slate-700">
-                <div className="flex items-center space-x-2">
-                  <BookOpen className="w-5 h-5 text-accent" />
-                  <div>
-                    <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">Graduation</p>
-                    <p className="text-sm font-bold text-accent">Sep 2025</p>
-                  </div>
-                </div>
+              {/* Graduation hat decoration */}
+              <div className="absolute -top-2 -right-2">
+                <GraduationCap className="w-12 h-12 text-primary drop-shadow-lg" />
               </div>
             </div>
           </div>
@@ -99,58 +60,55 @@ export function AboutSection() {
               </p>
             </div>
 
-            {/* Highlights Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-              {highlights.map((highlight, index) => {
-                const IconComponent = highlight.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-4 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-300 hover:scale-105 cursor-pointer group"
-                  >
-                    <div className="flex items-start space-x-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                        <IconComponent className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                          {highlight.title}
-                        </h4>
-                        <p className="text-sm text-slate-600 dark:text-slate-400">
-                          {highlight.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Education Card */}
-            <div className="bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center space-x-3 mb-4">
-                <GraduationCap className="w-6 h-6 text-primary" />
-                <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
-                  BRAC University
-                </h4>
+            {/* Education Section */}
+            <div className="space-y-6">
+              {/* BRAC University */}
+              <div className="bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center space-x-3 mb-4">
+                  <GraduationCap className="w-6 h-6 text-primary" />
+                  <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
+                    BRAC University
+                  </h4>
+                </div>
+                <p className="text-accent font-medium text-lg mb-2">BSc in Computer Science</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                  Graduating September 2025
+                </p>
+                <p className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+                  Relevant Coursework:
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Digital Logic Design", "OOP", "Data Structure", "Algorithms", 
+                    "Database Management System", "Operating System", "Image Processing", "Computer Vision", 
+                    "Machine Learning", "Cryptography and Cryptanalysis", "Ethical Hacking", "Computer Networks",
+                    "Software Engineering", "System Analysis and Design"
+                  ].map((course, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium"
+                    >
+                      {course}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <p className="text-accent font-medium text-lg mb-2">BSc in Computer Science</p>
-              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
-                Graduating September 2025 | CGPA: 3.60
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Digital Logic Design", "OOP", "Data Structures", "Algorithms", 
-                  "DBMS", "OS", "Image Processing", "Computer Vision", 
-                  "Machine Learning", "Cryptography"
-                ].map((course, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium"
-                  >
-                    {course}
-                  </span>
-                ))}
+
+              {/* Notre Dame College */}
+              <div className="bg-gradient-to-r from-accent/5 to-primary/5 border border-accent/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center space-x-3 mb-4">
+                  <BookOpen className="w-6 h-6 text-accent" />
+                  <h4 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
+                    Notre Dame College
+                  </h4>
+                </div>
+                <p className="text-primary font-medium text-lg mb-2">Higher Secondary Certificate (HSC)</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+                  Science Group | Completed 2020
+                </p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">
+                  Focused on Mathematics, Physics, Chemistry, and Biology
+                </p>
               </div>
             </div>
           </div>

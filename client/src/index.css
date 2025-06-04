@@ -320,6 +320,26 @@
     transform: scale(1);
   }
 
+  .scroll-fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+
+  .scroll-fade-in.visible {
+    opacity: 1;
+  }
+
+  .scroll-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+
+  .scroll-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   @keyframes glow {
     0%, 100% {
       box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);

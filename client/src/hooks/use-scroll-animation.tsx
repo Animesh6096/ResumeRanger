@@ -19,7 +19,7 @@ export function useScrollAnimation() {
     );
 
     const animatedElements = document.querySelectorAll(
-      ".scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale"
+      ".scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale, .scroll-fade-in, .scroll-fade-up"
     );
 
     animatedElements.forEach((el) => observer.observe(el));

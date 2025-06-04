@@ -1,21 +1,28 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "dark" | "light" | "system";
+type ContrastMode = "normal" | "high" | "extra-high";
 
 type ThemeProviderProps = {
   children: React.ReactNode;
   defaultTheme?: Theme;
+  defaultContrast?: ContrastMode;
   storageKey?: string;
+  contrastStorageKey?: string;
 };
 
 type ThemeProviderState = {
   theme: Theme;
+  contrast: ContrastMode;
   setTheme: (theme: Theme) => void;
+  setContrast: (contrast: ContrastMode) => void;
 };
 
 const initialState: ThemeProviderState = {
   theme: "system",
+  contrast: "normal",
   setTheme: () => null,
+  setContrast: () => null,
 };
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
@@ -23,11 +30,16 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 export function ThemeProvider({
   children,
   defaultTheme = "system",
+  defaultContrast = "normal",
   storageKey = "portfolio-theme",
+  contrastStorageKey = "portfolio-contrast",
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
+  );
+  const [contrast, setContrast] = useState<ContrastMode>(
+    () => (localStorage.getItem(contrastStorageKey) as ContrastMode) || defaultContrast
   );
 
   useEffect(() => {
@@ -42,17 +54,28 @@ export function ThemeProvider({
         : "light";
 
       root.classList.add(systemTheme);
-      return;
+    } else {
+      root.classList.add(theme);
     }
-
-    root.classList.add(theme);
   }, [theme]);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    
+    root.classList.remove("contrast-normal", "contrast-high", "contrast-extra-high");
+    root.classList.add(`contrast-${contrast}`);
+  }, [contrast]);
 
   const value = {
     theme,
+    contrast,
     setTheme: (newTheme: Theme) => {
       localStorage.setItem(storageKey, newTheme);
       setTheme(newTheme);
+    },
+    setContrast: (newContrast: ContrastMode) => {
+      localStorage.setItem(contrastStorageKey, newContrast);
+      setContrast(newContrast);
     },
   };
 

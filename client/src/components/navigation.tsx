@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { useTheme } from "@/hooks/use-theme";
+import { ContrastSelector } from "@/components/contrast-selector";
 import { Sun, Moon, Menu } from "lucide-react";
 
 const navLinks = [

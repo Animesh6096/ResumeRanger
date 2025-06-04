@@ -42,6 +42,9 @@ export function ThemeProvider({
     () => (localStorage.getItem(contrastStorageKey) as ContrastMode) || defaultContrast
   );
 
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   useEffect(() => {
     const root = window.document.documentElement;
 
@@ -65,6 +68,8 @@ export function ThemeProvider({
     root.classList.remove("contrast-normal", "contrast-high", "contrast-extra-high");
     root.classList.add(`contrast-${contrast}`);
   }, [contrast]);
+
+  if (!mounted) return null;
 
   const value = {
     theme,

@@ -2,6 +2,13 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
+  safelist: [
+    'contrast-normal',
+    'contrast-high',
+    'contrast-extra-high',
+    'dark',
+    'light',
+  ],
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {

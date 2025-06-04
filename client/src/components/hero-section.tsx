@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Brain, Shield, Users, Sparkles, Code, Database } from "lucide-react";
+import { Brain, Shield, Users, Sparkles, Code, Database, Github, Linkedin, Mail } from "lucide-react";
+import { FaFacebook } from "react-icons/fa";
 
 export function HeroSection() {
   const [currentRole, setCurrentRole] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+  
   const roles = [
     "AI Researcher",
     "Full-Stack Developer", 
@@ -12,11 +16,28 @@ export function HeroSection() {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+    const currentText = roles[currentRole];
+    let index = 0;
+    setDisplayedText("");
+    setIsTyping(true);
+
+    const typeInterval = setInterval(() => {
+      if (index < currentText.length) {
+        setDisplayedText(currentText.slice(0, index + 1));
+        index++;
+      } else {
+        setIsTyping(false);
+        clearInterval(typeInterval);
+        
+        // Wait before starting next role
+        setTimeout(() => {
+          setCurrentRole((prev) => (prev + 1) % roles.length);
+        }, 2000);
+      }
+    }, 100);
+
+    return () => clearInterval(typeInterval);
+  }, [currentRole]);
 
   const handleNavClick = (sectionId: string) => {
     const targetSection = document.getElementById(sectionId);
@@ -62,9 +83,9 @@ export function HeroSection() {
           <div className="h-16 flex items-center justify-center mb-8">
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 animate-fade-in font-mono">
               <span className="inline-block font-semibold text-primary dark:text-accent transition-all duration-500">
-                {roles[currentRole]}
+                {displayedText}
               </span>
-              <span className="animate-pulse text-primary dark:text-accent ml-1">|</span>
+              <span className={`text-primary dark:text-accent ml-1 ${isTyping ? 'animate-pulse' : 'animate-pulse'}`}>|</span>
             </p>
           </div>
           
@@ -72,6 +93,40 @@ export function HeroSection() {
             Passionate about machine learning, secure development, and creating innovative solutions that make a difference
           </p>
           
+          {/* Social Icons */}
+          <div className="flex justify-center space-x-6 mb-8 animate-slide-up animation-delay-350">
+            <a
+              href="https://github.com/animeshbhattacharjee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            >
+              <Github className="w-5 h-5" />
+            </a>
+            <a
+              href="https://linkedin.com/in/animeshbhattacharjee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a
+              href="https://facebook.com/animeshbhattacharjee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-blue-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            >
+              <FaFacebook className="w-5 h-5" />
+            </a>
+            <a
+              href="mailto:animesh@example.com"
+              className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            >
+              <Mail className="w-5 h-5" />
+            </a>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up animation-delay-400">
             <Button
               size="lg"

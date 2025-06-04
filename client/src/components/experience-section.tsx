@@ -9,6 +9,7 @@ const experiences = [
     location: "",
     type: "Leadership",
     icon: Briefcase,
+    logo: "https://nyntax.com/logo.png", // NYNTAX logo URL
     description: [
       "Led quality assurance initiatives across mobile apps and websites",
       "Streamlined testing processes and ensured product reliability",
@@ -46,11 +47,19 @@ export function ExperienceSection() {
                   {/* Experience Card - Full Width */}
                   <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-8 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                     <div className="flex items-start space-x-6">
-                      {/* Icon */}
+                      {/* Company Logo or Icon */}
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                          <IconComponent className="w-8 h-8 text-primary" />
-                        </div>
+                        {exp.logo ? (
+                          <div className="w-16 h-16 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 flex items-center justify-center p-2 shadow-sm">
+                            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-md flex items-center justify-center text-white font-bold text-lg">
+                              N
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                            <IconComponent className="w-8 h-8 text-primary" />
+                          </div>
+                        )}
                       </div>
                       
                       {/* Content */}

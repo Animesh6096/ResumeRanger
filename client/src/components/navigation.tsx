@@ -55,13 +55,8 @@ export function Navigation() {
   };
 
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else if (theme === "dark") {
-      setTheme("system");
-    } else {
-      setTheme("light");
-    }
+    const nextTheme = theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
+    setTheme(nextTheme);
   };
 
   return (
@@ -79,12 +74,12 @@ export function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-2 xl:space-x-4">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className={`text-sm font-medium transition-all duration-300 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 hover:scale-105 ${
+                className={`text-xs xl:text-sm font-medium transition-all duration-300 px-2 xl:px-3 py-1.5 xl:py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 hover:scale-105 ${
                   activeSection === link.href.replace("#", "")
                     ? "text-primary bg-primary/10"
                     : "text-slate-600 dark:text-slate-400 hover:text-primary"
@@ -115,7 +110,7 @@ export function Navigation() {
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
+                <Button variant="ghost" size="icon" className="lg:hidden">
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>

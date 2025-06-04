@@ -65,12 +65,18 @@ export function Navigation() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-3 hover-grow">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg hover:animate-bounce transition-all">
-              AB
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center relative overflow-hidden">
+              <span className="text-white font-bold text-sm z-10">AB</span>
+              <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
             </div>
-            <span className="text-xl font-semibold text-slate-800 dark:text-slate-100 gradient-text">
-              Animesh
-            </span>
+            <div className="flex flex-col">
+              <span className="text-lg font-bold text-slate-800 dark:text-slate-100 leading-none gradient-text">
+                Animesh
+              </span>
+              <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                AI • Security • Innovation
+              </span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}

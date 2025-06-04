@@ -60,10 +60,11 @@ export function HeroSection() {
           </h1>
           
           <div className="h-16 flex items-center justify-center mb-8">
-            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 animate-fade-in">
+            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 animate-fade-in font-mono">
               <span className="inline-block font-semibold text-primary dark:text-accent transition-all duration-500">
                 {roles[currentRole]}
               </span>
+              <span className="animate-pulse text-primary dark:text-accent ml-1">|</span>
             </p>
           </div>
           

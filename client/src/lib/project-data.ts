@@ -116,7 +116,7 @@ export const projects: Project[] = [
     category: ["ai-ml"],
     image: {
       gradient: "from-red-600 to-pink-600",
-      icon: "brain",
+      icon: "activity",
       animation: "heartbeat-pulse"
     },
     links: {

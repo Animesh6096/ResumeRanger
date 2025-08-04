@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Github, Info, Brain, Shield, Briefcase, Eye, Book } from "lucide-react";
+import { ExternalLink, Github, Info, Brain, Shield, Briefcase, Eye, Book, Activity } from "lucide-react";
 import { projects, getProjectsByCategory } from "@/lib/project-data";
 
 const categories = [
@@ -18,6 +18,7 @@ const iconMap = {
   briefcase: Briefcase,
   eye: Eye,
   book: Book,
+  activity: Activity,
 };
 
 export function ProjectsSection() {

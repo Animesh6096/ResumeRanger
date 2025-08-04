@@ -19,47 +19,52 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center space-x-6">
-            <a
-              href="https://linkedin.com/in/animesh-bhattacharjee-jhalok"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-700 transition-colors duration-300"
-              aria-label="LinkedIn profile of Animesh Bhattacharjee"
-            >
-              <Linkedin className="h-6 w-6" />
-            </a>
-            <a
-              href="https://github.com/Animesh6096"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-800 dark:hover:text-white transition-colors duration-300"
-              aria-label="GitHub profile of Animesh Bhattacharjee"
-            >
-              <Github className="h-6 w-6" />
-            </a>
-            <a
-              href="mailto:banimesh2002@gmail.com"
-              className="hover:text-red-600 transition-colors duration-300"
-              aria-label="Email Animesh Bhattacharjee"
-            >
-              <Mail className="h-6 w-6" />
-            </a>
+          <div className="flex flex-col sm:flex-row items-center gap-6">
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              <a
+                href="https://linkedin.com/in/animesh-bhattacharjee-jhalok"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-colors duration-300"
+                aria-label="LinkedIn profile of Animesh Bhattacharjee"
+              >
+                <Linkedin className="h-6 w-6" />
+              </a>
+              <a
+                href="https://github.com/Animesh6096"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 dark:text-slate-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-300"
+                aria-label="GitHub profile of Animesh Bhattacharjee"
+              >
+                <Github className="h-6 w-6" />
+              </a>
+              <a
+                href="mailto:banimesh2002@gmail.com"
+                className="text-slate-600 dark:text-slate-400 hover:text-red-600 transition-colors duration-300"
+                aria-label="Email Animesh Bhattacharjee"
+              >
+                <Mail className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.facebook.com/animesh.bhattacharjee.6096"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors duration-300"
+                aria-label="Facebook profile of Animesh Bhattacharjee"
+              >
+                <FacebookIcon className="w-6 h-6" />
+              </a>
+            </div>
+
+            {/* Resume Download Button */}
             <a
               href="/Animesh_Bhattacharjee_Resume(LaTeX).pdf"
               download
-              className="bg-green-600 text-white hover:bg-green-700 transition-all duration-200 px-4 py-2 rounded font-medium ml-2 shadow hover:scale-105 hover:shadow-lg"
+              className="bg-green-600 text-white hover:bg-green-700 transition-all duration-300 px-6 py-2.5 rounded-lg font-medium shadow-lg hover:scale-105 hover:shadow-xl flex items-center gap-2"
             >
               Download Resume
-            </a>
-            <a
-              href="https://www.facebook.com/animesh.bhattacharjee.6096"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors duration-300"
-              aria-label="Facebook profile of Animesh Bhattacharjee"
-            >
-              <FacebookIcon className="w-5 h-5" />
             </a>
           </div>
         </div>

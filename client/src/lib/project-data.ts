@@ -50,7 +50,7 @@ export const projects: Project[] = [
       animation: "border-pulse"
     },
     links: {
-      github: "#",
+      github: "https://github.com/Animesh6096/SecureBlogVault",
       demo: "#"
     },
     featured: true
@@ -68,7 +68,7 @@ export const projects: Project[] = [
       animation: "grid-fade"
     },
     links: {
-      github: "#",
+      github: "https://github.com/Animesh6096/Hire_me",
       demo: "#"
     }
   },
@@ -90,6 +90,24 @@ export const projects: Project[] = [
     }
   },
   {
+    id: "bengali-literature-rag",
+    title: "Bengali Literature RAG System",
+    description: "Intelligent Bengali Literature Analysis System for \"অপরিচিতা\" Story Analysis powered by Google Gemini AI & 10 Minute School Technology",
+    longDescription: "A sophisticated Retrieval-Augmented Generation (RAG) system specifically designed for analyzing Rabindranath Tagore's \"অপরিচিতা\" story. Features advanced Unicode normalization for flawless Bengali text rendering, AI-powered intelligence with Google Gemini for contextual understanding, bilingual conversation support, character deep-dive analysis, and comprehensive theme exploration. Built with 10 Minute School's commitment to making education accessible and engaging.",
+    technologies: ["Python", "React", "FastAPI", "Google Gemini AI", "ChromaDB", "RAG", "Bengali NLP"],
+    category: ["ai-ml"],
+    image: {
+      gradient: "from-emerald-600 to-cyan-600",
+      icon: "book",
+      animation: "text-flow"
+    },
+    links: {
+      github: "https://github.com/Animesh6096/10-minute-school",
+      demo: "#"
+    },
+    featured: true
+  },
+  {
     id: "leap-reader",
     title: "LeapReader",
     description: "Lip reading application using LipNet architecture with GRID Corpus Dataset and Tkinter interface",
@@ -102,7 +120,7 @@ export const projects: Project[] = [
       animation: "lip-animation"
     },
     links: {
-      github: "#",
+      github: "https://github.com/Animesh6096/Lipread-CSE439",
       demo: "#"
     }
   },
@@ -119,7 +137,7 @@ export const projects: Project[] = [
       animation: "book-grid"
     },
     links: {
-      github: "#",
+      github: "https://github.com/Animesh6096/readventure001",
       demo: "#"
     }
   }

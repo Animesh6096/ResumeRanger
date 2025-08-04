@@ -3,7 +3,6 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { useTheme } from "@/hooks/use-theme";
-import { ContrastSelector } from "@/components/contrast-selector";
 import { Sun, Moon, Menu } from "lucide-react";
 
 const navLinks = [
@@ -104,14 +103,13 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Accessibility & Theme Controls */}
+          {/* Theme Controls */}
           <div className="flex items-center space-x-2">
-            <ContrastSelector />
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="rounded-lg hover-grow relative"
+              className="rounded-lg hover:scale-105 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-700 relative"
               title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
@@ -135,29 +133,23 @@ export function Navigation() {
                   Navigate through different sections of the portfolio
                 </SheetDescription>
                 
-                {/* Mobile Accessibility Controls */}
-                <div className="flex items-center justify-center space-x-6 mt-6 mb-8 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
-                  <div className="flex flex-col items-center space-y-2">
-                    <span className="text-xs font-medium text-slate-600 dark:text-slate-400">Contrast</span>
-                    <ContrastSelector />
-                  </div>
-                  <div className="flex flex-col items-center space-y-2">
-                    <span className="text-xs font-medium text-slate-600 dark:text-slate-400">Theme</span>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={toggleTheme}
-                      className="rounded-lg hover-grow relative"
-                      title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
-                    >
-                      <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                      <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                      {theme === 'system' && (
-                        <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-                      )}
-                      <span className="sr-only">Toggle theme (currently {theme})</span>
-                    </Button>
-                  </div>
+                {/* Mobile Theme Control */}
+                <div className="flex items-center justify-center space-x-2 mt-6 mb-8 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                  <span className="text-xs font-medium text-slate-600 dark:text-slate-400">Theme</span>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={toggleTheme}
+                    className="rounded-lg hover:scale-105 transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-600 relative"
+                    title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
+                  >
+                    <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                    <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                    {theme === 'system' && (
+                      <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                    )}
+                    <span className="sr-only">Toggle theme (currently {theme})</span>
+                  </Button>
                 </div>
 
                 <div className="flex flex-col space-y-4">

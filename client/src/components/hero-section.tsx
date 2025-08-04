@@ -150,10 +150,10 @@ export function HeroSection() {
               Read My Blog
             </Button>
             <Button
-              variant="ghost"
+              variant="outline"
               size="lg"
               onClick={() => handleNavClick("contact")}
-              className="px-8 py-4 rounded-full hover-grow"
+              className="px-8 py-4 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white hover-lift"
             >
               Get In Touch
             </Button>

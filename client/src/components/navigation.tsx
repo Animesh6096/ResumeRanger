@@ -147,18 +147,16 @@ export function Navigation() {
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="w-[320px] max-w-[90vw] bg-white/80 dark:bg-background/95 backdrop-blur-xl border border-gray-200/50 dark:border-border/50 rounded-l-2xl shadow-2xl shadow-gray-900/15 dark:shadow-black/40 mr-2 mt-2 mb-2 h-[calc(100vh-16px)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right data-[state=open]:duration-300 data-[state=closed]:duration-200"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.85) 100%)',
-                  backdropFilter: 'blur(20px) saturate(180%) brightness(110%)',
-                  WebkitBackdropFilter: 'blur(20px) saturate(180%) brightness(110%)',
-                }}
+                className="w-[320px] max-w-[90vw] bg-white/90 dark:bg-slate-950/95 backdrop-blur-xl border border-gray-200/50 dark:border-slate-800/60 rounded-l-2xl shadow-2xl shadow-gray-900/15 dark:shadow-black/60 mr-2 mt-2 mb-2 h-[calc(100vh-16px)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right data-[state=open]:duration-300 data-[state=closed]:duration-200"
               >
-                {/* Enhanced Glossy overlay for light mode */}
-                <div className="absolute inset-0 rounded-l-2xl bg-gradient-to-br from-white/40 via-blue-50/20 to-gray-100/30 dark:from-white/10 dark:via-transparent dark:to-black/5 pointer-events-none"></div>
+                {/* Enhanced Glossy overlay with darker theme */}
+                <div className="absolute inset-0 rounded-l-2xl bg-gradient-to-br from-white/40 via-blue-50/20 to-gray-100/30 dark:from-white/5 dark:via-slate-700/10 dark:to-slate-900/20 pointer-events-none"></div>
                 
-                {/* Additional shine effect for light mode */}
-                <div className="absolute inset-0 rounded-l-2xl bg-gradient-to-t from-transparent via-white/10 to-white/30 dark:opacity-0 pointer-events-none"></div>
+                {/* Additional shine effect with glow */}
+                <div className="absolute inset-0 rounded-l-2xl bg-gradient-to-t from-transparent via-white/10 to-white/30 dark:from-transparent dark:via-slate-600/8 dark:to-slate-500/15 pointer-events-none"></div>
+                
+                {/* Dark mode glow effect */}
+                <div className="absolute inset-0 rounded-l-2xl bg-gradient-to-br from-transparent via-transparent to-transparent dark:from-primary/3 dark:via-transparent dark:to-accent/2 pointer-events-none"></div>
                 
                 <div className="relative z-10 h-full flex flex-col">
                   <SheetTitle className="text-left mb-6 mt-2 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent font-bold text-lg">
@@ -169,22 +167,26 @@ export function Navigation() {
                   </SheetDescription>
                   
                   {/* Mobile Theme Control */}
-                  <div className="flex items-center justify-between mb-8 p-4 bg-white/40 dark:bg-background/30 backdrop-blur-sm rounded-xl border border-gray-300/40 dark:border-border/30 shadow-lg shadow-gray-500/10 dark:shadow-black/5 relative overflow-hidden">
+                  <div className="flex items-center justify-between mb-8 p-4 bg-white/40 dark:bg-slate-900/60 backdrop-blur-sm rounded-xl border border-gray-300/40 dark:border-slate-700/50 shadow-lg shadow-gray-500/10 dark:shadow-black/40 relative overflow-hidden">
                     {/* Glossy effect for theme control */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-gray-50/30 to-transparent dark:from-white/5 dark:via-transparent dark:to-black/5 pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-gray-50/30 to-transparent dark:from-slate-600/10 dark:via-slate-700/15 dark:to-slate-900/20 pointer-events-none"></div>
+                    {/* Dark mode inner glow */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-transparent via-transparent to-transparent dark:from-primary/5 dark:via-transparent dark:to-accent/3 pointer-events-none"></div>
                     <div className="relative z-10 flex items-center justify-between w-full">
-                      <span className="text-sm font-medium text-gray-700 dark:text-foreground/80">Theme</span>
+                      <span className="text-sm font-medium text-gray-700 dark:text-slate-100">Theme</span>
                       <div className="flex items-center space-x-2">
-                        <div className="text-xs text-gray-600 dark:text-foreground/60 capitalize">{theme}</div>
+                        <div className="text-xs text-gray-600 dark:text-slate-300 capitalize">{theme}</div>
                         <Button
                           variant="ghost"
                           size="sm"
                           onClick={toggleTheme}
-                          className="w-10 h-10 rounded-full bg-gradient-to-br from-white/90 to-gray-100/70 dark:from-background/60 dark:to-background/40 backdrop-blur-sm border border-gray-300/50 dark:border-border/40 hover:border-gray-400/60 dark:hover:border-border/60 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/20 relative overflow-hidden"
+                          className="w-10 h-10 rounded-full bg-gradient-to-br from-white/90 to-gray-100/70 dark:from-slate-800/80 dark:to-slate-900/60 backdrop-blur-sm border border-gray-300/50 dark:border-slate-600/60 hover:border-gray-400/60 dark:hover:border-slate-500/80 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/20 dark:hover:shadow-primary/30 relative overflow-hidden"
                           title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
                         >
                           {/* Button shine effect */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-white/40 dark:opacity-0 pointer-events-none"></div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-white/40 dark:via-slate-500/10 dark:to-slate-400/15 pointer-events-none"></div>
+                          {/* Dark mode button glow */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent dark:from-primary/10 dark:via-transparent dark:to-accent/5 pointer-events-none"></div>
                           <Sun className="h-4 w-4 rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0 relative z-10" />
                           <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100 z-10" />
                           <span className="sr-only">Switch to {theme === 'light' ? 'dark' : 'light'} mode</span>
@@ -202,7 +204,7 @@ export function Navigation() {
                         className={`relative px-4 py-4 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-primary/10 hover:text-primary hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/15 w-full text-left group overflow-hidden ${
                           activeSection === link.href.replace("#", "")
                             ? "text-primary bg-gradient-to-r from-primary/15 to-primary/5 shadow-xl shadow-primary/15 border border-primary/20"
-                            : "text-gray-700 hover:text-gray-900 dark:text-muted-foreground dark:hover:text-foreground hover:bg-white/30 dark:hover:bg-primary/10"
+                            : "text-gray-700 hover:text-gray-900 dark:text-slate-200 dark:hover:text-white hover:bg-white/30 dark:hover:bg-slate-700/30"
                         }`}
                         style={{
                           animationDelay: `${index * 50}ms`,

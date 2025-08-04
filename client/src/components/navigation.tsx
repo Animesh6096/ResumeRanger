@@ -67,7 +67,7 @@ export function Navigation() {
   }, [location]);
 
   const toggleTheme = () => {
-    const nextTheme = theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
+    const nextTheme = theme === "light" ? "dark" : "light";
     setTheme(nextTheme);
   };
 
@@ -127,14 +127,11 @@ export function Navigation() {
               size="sm"
               onClick={toggleTheme}
               className={`relative w-10 h-10 rounded-full bg-gradient-to-br from-background/50 to-background/30 backdrop-blur-sm border border-border/50 hover:border-border transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10 ${scrolled ? 'bg-background/70' : 'bg-background/30'}`}
-              title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
+              title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             >
               <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              {theme === 'system' && (
-                <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-              )}
-              <span className="sr-only">Toggle theme (currently {theme})</span>
+              <span className="sr-only">Switch to {theme === 'light' ? 'dark' : 'light'} mode</span>
             </Button>
 
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -184,16 +181,13 @@ export function Navigation() {
                           size="sm"
                           onClick={toggleTheme}
                           className="w-10 h-10 rounded-full bg-gradient-to-br from-white/90 to-gray-100/70 dark:from-background/60 dark:to-background/40 backdrop-blur-sm border border-gray-300/50 dark:border-border/40 hover:border-gray-400/60 dark:hover:border-border/60 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/20 relative overflow-hidden"
-                          title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
+                          title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
                         >
                           {/* Button shine effect */}
                           <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-white/40 dark:opacity-0 pointer-events-none"></div>
                           <Sun className="h-4 w-4 rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0 relative z-10" />
                           <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100 z-10" />
-                          {theme === 'system' && (
-                            <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse shadow-sm z-10"></div>
-                          )}
-                          <span className="sr-only">Toggle theme (currently {theme})</span>
+                          <span className="sr-only">Switch to {theme === 'light' ? 'dark' : 'light'} mode</span>
                         </Button>
                       </div>
                     </div>

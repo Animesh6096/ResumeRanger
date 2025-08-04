@@ -73,8 +73,10 @@ export function Navigation() {
           {/* Logo */}
           <div className="flex items-center space-x-3 hover-grow">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center relative overflow-hidden">
-              <span className="text-white font-bold text-sm z-10">AB</span>
-              <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+              <svg width="18" height="18" viewBox="0 0 18 18" className="text-white">
+                <polygon points="9,1 15,5 15,13 9,17 3,13 3,5" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.8"/>
+                <circle cx="9" cy="9" r="2" fill="currentColor" opacity="0.6"/>
+              </svg>
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold text-slate-800 dark:text-slate-100 leading-none gradient-text">

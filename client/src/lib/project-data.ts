@@ -73,23 +73,6 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "animal-detection",
-    title: "Animal Detection",
-    description: "Machine learning model to detect and classify animals from images using computer vision",
-    longDescription: "Worked in a team of five members to build a machine learning model to detect animals from images using advanced computer vision techniques and deep learning algorithms.",
-    technologies: ["Python", "TensorFlow", "Computer Vision", "Team Project"],
-    category: ["ai-ml"],
-    image: {
-      gradient: "from-yellow-600 to-orange-600",
-      icon: "eye",
-      animation: "box-detection"
-    },
-    links: {
-      github: "#",
-      demo: "#"
-    }
-  },
-  {
     id: "bengali-literature-rag",
     title: "Bengali Literature RAG System",
     description: "Intelligent Bengali Literature Analysis System for \"অপরিচিতা\" Story Analysis powered by Google Gemini AI & 10 Minute School Technology",
@@ -138,6 +121,23 @@ export const projects: Project[] = [
     },
     links: {
       github: "https://github.com/Animesh6096/Lipread-CSE439",
+      demo: "#"
+    }
+  },
+  {
+    id: "animal-detection",
+    title: "Animal Detection",
+    description: "Machine learning model to detect and classify animals from images using Convolutional Neural Network and computer vision",
+    longDescription: "Worked in a team of five members to build a machine learning model to detect animals from images using Convolutional Neural Network architecture and advanced computer vision techniques with deep learning algorithms.",
+    technologies: ["Python", "TensorFlow", "CNN", "Computer Vision", "Team Project"],
+    category: ["ai-ml"],
+    image: {
+      gradient: "from-yellow-600 to-orange-600",
+      icon: "eye",
+      animation: "box-detection"
+    },
+    links: {
+      github: "#",
       demo: "#"
     }
   },

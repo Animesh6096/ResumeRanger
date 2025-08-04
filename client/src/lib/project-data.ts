@@ -108,6 +108,23 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    id: "atrial-fibrillation-detection",
+    title: "Early Detection of Atrial Fibrillation",
+    description: "Medical AI system for early detection of atrial fibrillation using 1D CNN and Random Forest algorithms with MIT-BIH Database",
+    longDescription: "Developed a machine learning system for early detection of atrial fibrillation using the MIT-BIH Atrial Fibrillation Database. Implemented and compared 1D Convolutional Neural Networks and Random Forest algorithms for ECG signal classification. Achieved 78% accuracy in detecting atrial fibrillation patterns, contributing to early cardiovascular disease diagnosis and prevention.",
+    technologies: ["Python", "1D CNN", "Random Forest", "MIT-BIH Database", "Signal Processing", "Medical AI"],
+    category: ["ai-ml"],
+    image: {
+      gradient: "from-red-600 to-pink-600",
+      icon: "brain",
+      animation: "heartbeat-pulse"
+    },
+    links: {
+      github: "#",
+      demo: "#"
+    }
+  },
+  {
     id: "leap-reader",
     title: "LeapReader",
     description: "Lip reading application using LipNet architecture with GRID Corpus Dataset and Tkinter interface",

@@ -1,4 +1,4 @@
-import { GraduationCap, Briefcase, Award, Users } from "lucide-react";
+import { GraduationCap, Briefcase, Award, Users, ExternalLink } from "lucide-react";
 
 const experiences = [
   {
@@ -10,6 +10,7 @@ const experiences = [
     type: "Leadership",
     icon: Briefcase,
     logo: "/nyntax.jpg", // NYNTAX logo public
+    website: "https://nyntax.com",
     description: [
       "Led quality assurance initiatives across mobile apps and websites",
       "Streamlined testing processes and ensured product reliability",
@@ -50,8 +51,22 @@ export function ExperienceSection() {
                       {/* Company Logo or Icon */}
                       <div className="flex-shrink-0">
                         {exp.logo ? (
-                          <div className="w-16 h-16 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 flex items-center justify-center p-2 shadow-sm">
-                            <img src="/nyntax.jpg" alt="NYNTAX company logo, where Animesh worked as QA Manager" className="w-12 h-12 object-contain rounded-md" />
+                          <div className="group">
+                            <a
+                              href={exp.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block w-16 h-16 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600 flex items-center justify-center p-2 shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-primary/50 dark:hover:border-accent/50 relative overflow-hidden"
+                              aria-label={`Visit ${exp.company} website`}
+                            >
+                              <img 
+                                src={exp.logo} 
+                                alt={`${exp.company} company logo`} 
+                                className="w-12 h-12 object-contain rounded-md transition-transform duration-300 group-hover:scale-110" 
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                              <ExternalLink className="absolute top-1 right-1 w-3 h-3 text-primary/60 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                            </a>
                           </div>
                         ) : (
                           <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
@@ -68,7 +83,20 @@ export function ExperienceSection() {
                               {exp.title}
                             </h3>
                             {exp.company && (
-                              <p className="text-accent font-medium text-lg">{exp.company}</p>
+                              <div className="flex items-center space-x-2">
+                                <p className="text-accent font-medium text-lg">{exp.company}</p>
+                                {exp.website && (
+                                  <a
+                                    href={exp.website}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-primary/60 hover:text-primary transition-colors duration-300 hover:scale-110 transform"
+                                    aria-label={`Visit ${exp.company} website`}
+                                  >
+                                    <ExternalLink className="w-4 h-4" />
+                                  </a>
+                                )}
+                              </div>
                             )}
                           </div>
                           {exp.type && (

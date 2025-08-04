@@ -150,15 +150,10 @@ export function Navigation() {
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="w-[320px] max-w-[90vw] bg-background/95 backdrop-blur-xl border border-border/50 rounded-l-2xl shadow-2xl shadow-black/20 dark:shadow-black/40 mr-2 mt-2 mb-2 h-[calc(100vh-16px)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right data-[state=open]:duration-300 data-[state=closed]:duration-200"
-                style={{
-                  background: 'linear-gradient(135deg, hsl(var(--background))/0.95 0%, hsl(var(--background))/0.90 100%)',
-                  backdropFilter: 'blur(20px) saturate(180%)',
-                  WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-                }}
+                className="w-[320px] max-w-[90vw] bg-white/95 dark:bg-background/95 backdrop-blur-xl border border-gray-200/80 dark:border-border/50 rounded-l-2xl shadow-2xl shadow-black/10 dark:shadow-black/40 mr-2 mt-2 mb-2 h-[calc(100vh-16px)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right data-[state=open]:duration-300 data-[state=closed]:duration-200"
               >
-                {/* Glossy overlay */}
-                <div className="absolute inset-0 rounded-l-2xl bg-gradient-to-br from-white/10 via-transparent to-black/5 pointer-events-none"></div>
+                {/* Glossy overlay - lighter for light mode */}
+                <div className="absolute inset-0 rounded-l-2xl bg-gradient-to-br from-white/20 via-gray-50/10 to-gray-100/10 dark:from-white/10 dark:via-transparent dark:to-black/5 pointer-events-none"></div>
                 
                 <div className="relative z-10 h-full flex flex-col">
                   <SheetTitle className="text-left mb-6 mt-2 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent font-bold text-lg">
@@ -169,15 +164,15 @@ export function Navigation() {
                   </SheetDescription>
                   
                   {/* Mobile Theme Control */}
-                  <div className="flex items-center justify-between mb-8 p-4 bg-background/30 backdrop-blur-sm rounded-xl border border-border/30 shadow-lg shadow-black/5">
-                    <span className="text-sm font-medium text-muted-foreground">Theme</span>
+                  <div className="flex items-center justify-between mb-8 p-4 bg-gray-50/60 dark:bg-background/30 backdrop-blur-sm rounded-xl border border-gray-200/60 dark:border-border/30 shadow-sm shadow-gray-500/5 dark:shadow-black/5">
+                    <span className="text-sm font-medium text-gray-700 dark:text-foreground/80">Theme</span>
                     <div className="flex items-center space-x-2">
-                      <div className="text-xs text-muted-foreground/70 capitalize">{theme}</div>
+                      <div className="text-xs text-gray-600 dark:text-foreground/60 capitalize">{theme}</div>
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick={toggleTheme}
-                        className="w-10 h-10 rounded-full bg-gradient-to-br from-background/60 to-background/40 backdrop-blur-sm border border-border/40 hover:border-border/60 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 relative"
+                        className="w-10 h-10 rounded-full bg-gradient-to-br from-white/80 to-gray-50/60 dark:from-background/60 dark:to-background/40 backdrop-blur-sm border border-gray-200/60 dark:border-border/40 hover:border-gray-300/80 dark:hover:border-border/60 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 relative"
                         title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
                       >
                         <Sun className="h-4 w-4 rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0" />
@@ -199,7 +194,7 @@ export function Navigation() {
                         className={`relative px-4 py-4 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-primary/10 hover:text-primary hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 w-full text-left group ${
                           activeSection === link.href.replace("#", "")
                             ? "text-primary bg-gradient-to-r from-primary/15 to-primary/5 shadow-lg shadow-primary/10 border border-primary/20"
-                            : "text-muted-foreground hover:text-foreground"
+                            : "text-gray-700 hover:text-gray-900 dark:text-muted-foreground dark:hover:text-foreground"
                         }`}
                         style={{
                           animationDelay: `${index * 50}ms`,
@@ -224,8 +219,8 @@ export function Navigation() {
                   </div>
 
                   {/* Footer */}
-                  <div className="mt-6 pt-4 border-t border-border/30">
-                    <div className="text-xs text-muted-foreground/60 text-center">
+                  <div className="mt-6 pt-4 border-t border-gray-200/60 dark:border-border/30">
+                    <div className="text-xs text-gray-500 dark:text-muted-foreground/60 text-center">
                       Animesh Bhattacharjee
                     </div>
                   </div>

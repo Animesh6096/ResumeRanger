@@ -148,50 +148,87 @@ export function Navigation() {
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[280px] bg-background/95 backdrop-blur-xl border-l border-border/50">
-                <SheetTitle className="text-left mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                  Navigation
-                </SheetTitle>
-                <SheetDescription className="sr-only">
-                  Navigate through different sections of the portfolio
-                </SheetDescription>
+              <SheetContent 
+                side="right" 
+                className="w-[320px] max-w-[90vw] bg-background/95 backdrop-blur-xl border border-border/50 rounded-l-2xl shadow-2xl shadow-black/20 dark:shadow-black/40 mr-2 mt-2 mb-2 h-[calc(100vh-16px)] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right data-[state=open]:duration-300 data-[state=closed]:duration-200"
+                style={{
+                  background: 'linear-gradient(135deg, hsl(var(--background))/0.95 0%, hsl(var(--background))/0.90 100%)',
+                  backdropFilter: 'blur(20px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+                }}
+              >
+                {/* Glossy overlay */}
+                <div className="absolute inset-0 rounded-l-2xl bg-gradient-to-br from-white/10 via-transparent to-black/5 pointer-events-none"></div>
                 
-                {/* Mobile Theme Control */}
-                <div className="flex items-center justify-center space-x-2 mb-8 p-4 bg-background/50 backdrop-blur-sm rounded-lg border border-border/50">
-                  <span className="text-xs font-medium text-muted-foreground">Theme</span>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={toggleTheme}
-                    className="w-10 h-10 rounded-full bg-gradient-to-br from-background/50 to-background/30 backdrop-blur-sm border border-border/50 hover:border-border transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10 relative"
-                    title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
-                  >
-                    <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                    <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                    {theme === 'system' && (
-                      <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-                    )}
-                    <span className="sr-only">Toggle theme (currently {theme})</span>
-                  </Button>
-                </div>
+                <div className="relative z-10 h-full flex flex-col">
+                  <SheetTitle className="text-left mb-6 mt-2 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent font-bold text-lg">
+                    Navigation
+                  </SheetTitle>
+                  <SheetDescription className="sr-only">
+                    Navigate through different sections of the portfolio
+                  </SheetDescription>
+                  
+                  {/* Mobile Theme Control */}
+                  <div className="flex items-center justify-between mb-8 p-4 bg-background/30 backdrop-blur-sm rounded-xl border border-border/30 shadow-lg shadow-black/5">
+                    <span className="text-sm font-medium text-muted-foreground">Theme</span>
+                    <div className="flex items-center space-x-2">
+                      <div className="text-xs text-muted-foreground/70 capitalize">{theme}</div>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={toggleTheme}
+                        className="w-10 h-10 rounded-full bg-gradient-to-br from-background/60 to-background/40 backdrop-blur-sm border border-border/40 hover:border-border/60 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 relative"
+                        title={`Current theme: ${theme === 'system' ? 'system (auto)' : theme}`}
+                      >
+                        <Sun className="h-4 w-4 rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0" />
+                        <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100" />
+                        {theme === 'system' && (
+                          <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse shadow-sm"></div>
+                        )}
+                        <span className="sr-only">Toggle theme (currently {theme})</span>
+                      </Button>
+                    </div>
+                  </div>
 
-                <div className="flex flex-col space-y-2">
-                  {navLinks.map((link) => (
-                    <button
-                      key={link.href}
-                      onClick={() => handleNavClick(link.href)}
-                      className={`relative px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-primary/10 hover:text-primary hover:scale-105 w-full text-left ${
-                        activeSection === link.href.replace("#", "")
-                          ? "text-primary bg-primary/10 shadow-sm border border-primary/20"
-                          : "text-muted-foreground hover:text-foreground"
-                      }`}
-                    >
-                      {link.label}
-                      {activeSection === link.href.replace("#", "") && (
-                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-gradient-to-b from-primary to-primary/50 rounded-r-full"></div>
-                      )}
-                    </button>
-                  ))}
+                  {/* Navigation Links */}
+                  <div className="flex-1 flex flex-col space-y-1 overflow-y-auto scrollbar-thin scrollbar-thumb-border/30 scrollbar-track-transparent">
+                    {navLinks.map((link, index) => (
+                      <button
+                        key={link.href}
+                        onClick={() => handleNavClick(link.href)}
+                        className={`relative px-4 py-4 text-sm font-medium rounded-xl transition-all duration-300 hover:bg-primary/10 hover:text-primary hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/10 w-full text-left group ${
+                          activeSection === link.href.replace("#", "")
+                            ? "text-primary bg-gradient-to-r from-primary/15 to-primary/5 shadow-lg shadow-primary/10 border border-primary/20"
+                            : "text-muted-foreground hover:text-foreground"
+                        }`}
+                        style={{
+                          animationDelay: `${index * 50}ms`,
+                        }}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="transition-all duration-300 group-hover:translate-x-1">{link.label}</span>
+                          {activeSection === link.href.replace("#", "") && (
+                            <div className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-sm"></div>
+                          )}
+                        </div>
+                        
+                        {/* Active indicator */}
+                        {activeSection === link.href.replace("#", "") && (
+                          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-gradient-to-b from-primary via-primary/80 to-primary/40 rounded-r-full shadow-sm animate-pulse"></div>
+                        )}
+                        
+                        {/* Hover effect */}
+                        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* Footer */}
+                  <div className="mt-6 pt-4 border-t border-border/30">
+                    <div className="text-xs text-muted-foreground/60 text-center">
+                      Animesh Bhattacharjee
+                    </div>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

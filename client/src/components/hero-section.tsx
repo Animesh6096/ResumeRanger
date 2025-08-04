@@ -76,13 +76,13 @@ export function HeroSection() {
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-2">Hello, I'm</p>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-800 dark:text-slate-100 mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 dark:text-slate-100 mb-4 sm:mb-6 leading-tight">
             <span className="animate-scale-in">ANIMESH</span><br />
             <span className="gradient-text animate-scale-in animation-delay-200">BHATTACHARJEE</span>
           </h1>
           
-          <div className="h-16 flex items-center justify-center mb-8">
-            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 animate-fade-in font-mono">
+          <div className="h-12 sm:h-14 md:h-16 flex items-center justify-center mb-6 sm:mb-8">
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-400 animate-fade-in font-mono px-2">
               <span className="inline-block font-semibold text-primary dark:text-accent transition-all duration-500">
                 {displayedText}
               </span>
@@ -90,7 +90,7 @@ export function HeroSection() {
             </p>
           </div>
           
-          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-300">
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up animation-delay-300 px-4">
             Passionate about machine learning, secure development, and creating innovative solutions that make a difference
           </p>
           
@@ -132,11 +132,11 @@ export function HeroSection() {
             </a>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up animation-delay-400">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-slide-up animation-delay-400 px-4">
             <Button
               size="lg"
               onClick={() => handleNavClick("projects")}
-              className="px-8 py-4 rounded-full shadow-lg hover-lift animate-glow"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-full shadow-lg hover-lift animate-glow"
             >
               <Sparkles className="h-4 w-4 mr-2" />
               View My Projects
@@ -145,7 +145,7 @@ export function HeroSection() {
               variant="outline"
               size="lg"
               onClick={() => handleNavClick("blog")}
-              className="px-8 py-4 rounded-full border-2 border-accent text-accent hover:bg-accent hover:text-white hover-lift"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-full border-2 border-accent text-accent hover:bg-accent hover:text-white hover-lift"
             >
               Read My Blog
             </Button>
@@ -153,7 +153,7 @@ export function HeroSection() {
               variant="outline"
               size="lg"
               onClick={() => handleNavClick("contact")}
-              className="px-8 py-4 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white hover-lift"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white hover-lift"
             >
               Get In Touch
             </Button>
@@ -161,39 +161,39 @@ export function HeroSection() {
         </div>
 
         {/* Enhanced Key Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover-lift animate-scale-in animation-delay-500 group">
-            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:animate-bounce">
-              <Brain className="h-6 w-6 text-primary" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16 lg:mt-20 px-4">
+          <div className="bg-white dark:bg-slate-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover-lift animate-scale-in animation-delay-500 group transform transition-all duration-300 hover:scale-105">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 mx-auto group-hover:animate-bounce">
+              <Brain className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
             </div>
-            <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
+            <h3 className="text-base sm:text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1 sm:mb-2">
               AI Research
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm">
+            <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
               Thesis in Visual Speech Recognition
             </p>
           </div>
           
-          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover-lift animate-scale-in animation-delay-600 group">
-            <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:animate-bounce">
-              <Shield className="h-6 w-6 text-accent" />
+          <div className="bg-white dark:bg-slate-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover-lift animate-scale-in animation-delay-600 group transform transition-all duration-300 hover:scale-105">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-teal-100 dark:bg-teal-900/50 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 mx-auto group-hover:animate-bounce">
+              <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
             </div>
-            <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
+            <h3 className="text-base sm:text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1 sm:mb-2">
               Secure Development
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm">
+            <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
               SecureBlogVault Platform
             </p>
           </div>
           
-          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover-lift animate-scale-in animation-delay-700 group">
-            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:animate-bounce">
-              <Users className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+          <div className="bg-white dark:bg-slate-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover-lift animate-scale-in animation-delay-700 group transform transition-all duration-300 hover:scale-105 sm:col-span-2 lg:col-span-1">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 mx-auto group-hover:animate-bounce">
+              <Users className="h-5 w-5 sm:h-6 sm:w-6 text-purple-600 dark:text-purple-400" />
             </div>
-            <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2">
+            <h3 className="text-base sm:text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1 sm:mb-2">
               QA Leadership
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm">
+            <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
               Team Leadership at Nyntax
             </p>
           </div>
